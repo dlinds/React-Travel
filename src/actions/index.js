@@ -28,14 +28,14 @@ export const getDestinationsFailure = (destinations) => ({
   destinations
 });
 
-export const makeApiCall = (search) => {
+export const makeApiCall = (search, name = '') => {
   return dispatch => {
     if (search === 'reviews') {
       dispatch(requestReviews);
     } else {
       dispatch(requestDestinations);
     }
-    return fetch(`https://localhost:5001/api/${search}/`)
+    return fetch(`https://localhost:5001/api/${search}/?name=${name}`)
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {

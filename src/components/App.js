@@ -8,13 +8,26 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
+  const [routePath, setRoutePath] = useState(
+    <Route
+      path="/"
+      element={
+        <Destinations
+          handleClickingDetails={handleClickingDetails} />
+      }
+    />
+  )
+  function handleClickingDetails(destination) {
+    setRoutePath(<Route path="/" element={<Reviews destination={destination} />} />)
+  }
+
   return (
     <Router>
       <Header />
       <Container>
         <Routes>
-          <Route path="/" element={<Destinations />} />
-          <Route path="/reviews" element={<Reviews />} />
+
+          {routePath}
         </Routes>
       </Container>
     </Router>
