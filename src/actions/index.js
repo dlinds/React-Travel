@@ -35,7 +35,7 @@ export const makeApiCall = (search, name = '') => {
     } else {
       dispatch(requestDestinations);
     }
-    return fetch(`https://localhost:5001/api/${search}/?name=${name}`)
+    return fetch(`http://travelapi.dlinds.com:6003/api/${search}/?name=${name}`)
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
