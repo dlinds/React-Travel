@@ -1,8 +1,6 @@
 # About the Application
-This is a React Travel application build to call an API and show destinations and reviews for those destinations. To view the repository for the API, please navigate [here](https://github.com/dlinds/Travel.Solution).
+This is a React Travel application build to call an API and show destinations and reviews for those destinations. To view, download, and run the repository for the API, please navigate [here](https://github.com/dlinds/Travel.Solution).
 
-## Viewing this application
-This application is published to Github Pages. To view, please browse [here](https://dlinds.github.io/travel-react)
 
 # Getting Started with Create React App
 
